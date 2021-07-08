@@ -4,27 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Types</title>
+    <title>Customer Details</title>
+    <script>
+        function setStoreValue(){
+            var
+        }
+    </script>
 </head>
 <style>
     form{
         background-color: rgb(154, 223, 250);
-        width: 400px;
+        width: 1100px;
         padding: 20px;
         margin: 20px;
         color: rgb(133, 63, 63);
     }
+    body{
+        background-color: rgb(248, 233, 219);
+
+    }
+    a{
+        color: mediumblue;
+        padding: 10px;
+    }
+    nav{
+        background-color: rgb(252, 213, 106);
+        padding: 20px;
+    }
+    input{
+        float: right;
+    }
 </style>
 <body>
+    <nav> 
+        <a href="./employeeformINPUTs.html">Registration</a>
+        <a href="./imagetagprac.html">Home</a>
+        <a href="./productimage.html">Products</a>
+        <a href="./AboutUs1.html">About Us</a>
+        <a href="./contactus.html">Contact Us</a>
+        <input type="text">
+        </nav>
     <h3 style="color: darkviolet;">Input Types</h3>
 
     <form>
         <label>Name</label>
         <input type="text">
-        <br> <br>
+        </form>
+        <form>
         <label>Password</label>
         <input type="password" placeholder="Enter Password">
-        <br><br>
+        </form>
         <form>
             <label>Gender</label>
             <input type="radio" name="gender" value="male">Male
@@ -40,6 +69,8 @@
             <label>Age</label>
             <input type="number" min="5" max="60"> years
         </form>
+        <br>
+        <button onclick="setStoreValue">Submit</button>
 
 
     </form>
