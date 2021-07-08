@@ -9,16 +9,25 @@
         function setStoreValue(){
             var nameData = document.getElementById("name");
             var passwordData = document.getElementById("password");
-
+            var colorData=document.getElementById("colorPicker");
+            var bodyObj= document.getElementById("body");
+            
             sessionStorage.setItem("userName", nameData.value);
             sessionStorage.setItem("userPassword", passwordData.value)
+            sessionStorage.setItem("favColor", colorData.value);
+            bodyObj.style=`background-color: ${sessionStorage.getItem("favColor")}`;
         }
         function getStoreValue(){
             var nameData = document.getElementById("name");
             var passwordData = document.getElementById("password");
+            var colorData=document.getElementById("colorPicker");
+            var bodyObj= document.getElementById("body");
+        
 
             nameData.value=sessionStorage.getItem("userName");
             passwordData.value=sessionStorage.getItem("userPassword");
+            colorData.value= sessionStorage.getItem("favColor");
+            bodyObj.style=`background-color: ${sessionStorage.getItem("favColor")}`;
         }
     </script>
 </head>
@@ -29,10 +38,6 @@
         padding: 20px;
         margin: 20px;
         color: rgb(133, 63, 63);
-    }
-    body{
-        background-color: rgb(248, 233, 219);
-
     }
     a{
         color: mediumblue;
@@ -46,7 +51,7 @@
         float: right;
     }
 </style>
-<body>
+<body id="body">
     <nav> 
         <a href="./employeeformINPUTs.html">Registration</a>
         <a href="./imagetagprac.html">Home</a>
@@ -70,15 +75,14 @@
             <input type="radio" name="gender" value="male">Male
             <input type="radio" name="gender" value="female">Female
         </form>
-        <form>
-            <label>Hobbies</label>
-            <input type="checkbox" name="eating">Eating
-            <input type="checkbox" name="sleeping">Sleeping
-            <input type="checkbox" name="reading">reading
-        </form>
+        
         <form>
             <label>Age</label>
-            <input type="number" min="5" max="60"> years
+            <input type="number" min="5" max="60">years
+        </form>
+        <form>
+            <label>Favorite color</label>
+            <input type="color" id="colorPicker">
         </form>
         <br>
         <button onclick="setStoreValue()">Submit</button>
