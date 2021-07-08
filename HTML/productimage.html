@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function getStoreValue(){
+            var bodyObj= document.getElementById("body");
+    
+            bodyObj.style=`background-color: ${sessionStorage.getItem("favColor")}`;
+        }
+    
+    </script>
 </head>
 <style>
     img{
@@ -27,7 +35,7 @@
         float: right;
     }
 </style>
-<body>
+<body id="body">
     <nav> 
         <a href="./employeeformINPUTs.html">Registration</a>
         <a href="./imagetagprac.html">Home</a>
@@ -47,6 +55,10 @@
         <img src="../src/pic1.jpg" alt="">
         <figcaption>Laptps-Knowledge Digitalized</figcaption>
     </figure>
+
+    <script>
+        getStoreValue();
+    </script>
     
 </body>
 </html>

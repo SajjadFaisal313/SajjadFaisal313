@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+    function getStoreValue(){
+        var bodyObj= document.getElementById("body");
+
+        bodyObj.style=`background-color: ${sessionStorage.getItem("favColor")}`;
+    }
+
+</script>
 </head>
 <style>
     a{
@@ -19,7 +27,7 @@
         float: right;
     }
 </style>
-<body>
+<body id="body">
     <nav> 
         <a href="./employeeformINPUTs.html">Registration</a>
         <a href="./imagetagprac.html">Home</a>
@@ -49,6 +57,10 @@ Contact numbers
     <br><br>
     <hr>
     <br><br><br>
+
+    <script>
+        getStoreValue();
+    </script>
     
 </body>
 </html>

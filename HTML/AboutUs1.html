@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+    function getStoreValue(){
+        var bodyObj= document.getElementById("body");
+
+        bodyObj.style=`background-color: ${sessionStorage.getItem("favColor")}`;
+    }
+
+</script>
 </head>
 <style>
     img{
@@ -16,14 +24,14 @@
         padding: 10px;
     }
     nav{
-        background-color: rgb(252, 213, 106);
+        background-color: rgb(240, 201, 96);
         padding: 20px;
     }
     input{
         float: right;
     }
 </style>
-<body>
+<body id="body">
     <nav> 
         <a href="./employeeformINPUTs.html">Registration</a>
         <a href="./imagetagprac.html">Home</a>
@@ -62,6 +70,10 @@
     <figure>
         <img src="../src/family.1.jpg" alt="">
     </figure>
+
+    <script>
+        getStoreValue();
+    </script>
 
 </body>
 
